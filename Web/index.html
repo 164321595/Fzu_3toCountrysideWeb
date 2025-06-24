@@ -1,0 +1,1588 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>溯洄海丝文脉，寻梦千年世遗 - 福州大学三下乡实践活动</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0F4C81",
+                        secondary: "#E6B800",
+                        accent: "#E67300",
+                        light: "#F8F9FA",
+                        dark: "#343A40",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "system-ui", "sans-serif"],
+                        serif: ["Noto Serif SC", "serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities { .content-auto { content-visibility: auto; } .text-shadow { text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); } .text-shadow-lg { text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); } .animate-float { animation: float
+        3s ease-in-out infinite; } @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } } }
+    </style>
+</head>
+
+<body class="bg-light text-dark antialiased">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <nav class="bg-primary/95 text-white shadow-lg">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex justify-between items-center">
+                    <a href="#" class="flex items-center space-x-2">
+                        <i class="fa fa-ship text-2xl text-secondary"></i>
+                        <span class="font-bold text-xl tracking-wide">海丝文脉·世遗寻梦</span
+              >
+            </a>
+
+            <!-- 桌面导航 -->
+            <div class="hidden md:flex space-x-8">
+              <a
+                href="#about"
+                class="hover:text-secondary transition-colors duration-200"
+                >活动概况</a
+              >
+              <a
+                href="#schedule"
+                class="hover:text-secondary transition-colors duration-200"
+                >行程安排</a
+              >
+              <a
+                href="#highlights"
+                class="hover:text-secondary transition-colors duration-200"
+                >精彩瞬间</a
+              >
+              <a
+                href="#gallery"
+                class="hover:text-secondary transition-colors duration-200"
+                >活动掠影</a
+              >
+              <a
+                href="#team"
+                class="hover:text-secondary transition-colors duration-200"
+                >实践团队</a
+              >
+              <a
+                href="#contact"
+                class="hover:text-secondary transition-colors duration-200"
+                >联系我们</a
+              >
+            </div>
+
+            <!-- 移动端菜单按钮 -->
+            <button
+              id="menu-toggle"
+              class="md:hidden text-white focus:outline-none"
+            >
+              <i class="fa fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-primary/95">
+          <div class="container mx-auto px-4 py-2 space-y-3">
+            <a
+              href="#about"
+              class="block py-2 hover:text-secondary transition-colors duration-200"
+              >活动概况</a
+            >
+            <a
+              href="#schedule"
+              class="block py-2 hover:text-secondary transition-colors duration-200"
+              >行程安排</a
+            >
+            <a
+              href="#highlights"
+              class="block py-2 hover:text-secondary transition-colors duration-200"
+              >精彩瞬间</a
+            >
+            <a
+              href="#gallery"
+              class="block py-2 hover:text-secondary transition-colors duration-200"
+              >活动掠影</a
+            >
+            <a
+              href="#team"
+              class="block py-2 hover:text-secondary transition-colors duration-200"
+              >实践团队</a
+            >
+            <a
+              href="#contact"
+              class="block py-2 hover:text-secondary transition-colors duration-200"
+              >联系我们</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 封面区域 -->
+    <section
+      class="relative h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://picsum.photos/id/1015/1920/1080"
+          alt="泉州古城风光"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-primary/40"></div>
+      </div>
+      <div class="container mx-auto px-4 z-10 text-center">
+        <h1
+          class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white mb-6 leading-tight text-shadow-lg animate-float"
+        >
+          溯洄海丝文脉，寻梦千年世遗
+        </h1>
+        <p
+          class="text-[clamp(1.2rem,2vw,1.5rem)] text-white/90 mb-8 max-w-3xl mx-auto text-shadow"
+        >
+          福州大学"三下乡"社会实践活动·泉州世遗探索之旅
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#schedule"
+            class="bg-secondary hover:bg-secondary/90 text-primary font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
+            查看行程 <i class="fa fa-calendar ml-2"></i>
+          </a>
+          <a
+            href="#highlights"
+            class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
+            精彩看点 <i class="fa fa-star ml-2"></i>
+          </a>
+        </div>
+        <div
+          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+        >
+          <a href="#about" class="text-white/80 hover:text-white">
+            <i class="fa fa-angle-down text-3xl"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 活动概况 -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2
+            class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-4"
+          >
+            活动概况
+          </h2>
+          <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            福州大学"溯洄海丝文脉，寻梦千年世遗"实践队走进泉州，探索海上丝绸之路的历史文化遗产
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <div
+              class="bg-light p-6 rounded-xl shadow-md transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            >
+              <div class="flex items-start">
+                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                  <i class="fa fa-calendar text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary mb-2">活动时间</h3>
+                  <p class="text-gray-600">2025年7月8日至7月12日，为期5天</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-light p-6 rounded-xl shadow-md transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            >
+              <div class="flex items-start">
+                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                  <i class="fa fa-map-marker text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary mb-2">活动地点</h3>
+                  <p class="text-gray-600">泉州市丰泽区、鲤城区、南安市</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-light p-6 rounded-xl shadow-md transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            >
+              <div class="flex items-start">
+                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                  <i class="fa fa-users text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary mb-2">参与人员</h3>
+                  <p class="text-gray-600">福州大学师生代表、当地文化专家</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-light p-6 rounded-xl shadow-md transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            >
+              <div class="flex items-start">
+                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                  <i class="fa fa-book text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary mb-2">活动主题</h3>
+                  <p class="text-gray-600">
+                    探索海上丝绸之路文化遗产，传承千年世遗精神
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="rounded-xl overflow-hidden shadow-2xl">
+              <img
+                src="https://picsum.photos/id/1016/800/600"
+                alt="泉州古城墙"
+                class="w-full h-auto"
+              />
+            </div>
+            <div
+              class="absolute -bottom-6 -left-6 bg-secondary text-primary p-4 rounded-lg shadow-lg hidden md:block"
+            >
+              <p class="font-bold text-xl">海上丝绸之路起点</p>
+            </div>
+            <div
+              class="absolute -top-6 -right-6 bg-primary text-white p-4 rounded-lg shadow-lg hidden md:block"
+            >
+              <p class="font-bold text-xl">世界文化遗产城市</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16">
+          <div class="bg-primary/5 rounded-xl p-8 shadow-md">
+            <h3 class="text-2xl font-bold text-primary mb-6 text-center">
+              活动意义
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div
+                class="text-center p-4 transform transition-all duration-300 hover:scale-105"
+              >
+                <div
+                  class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <i class="fa fa-history text-primary text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-bold text-primary mb-3">文化传承</h4>
+                <p class="text-gray-600">
+                  深入挖掘海上丝绸之路文化遗产，传承和弘扬优秀传统文化
+                </p>
+              </div>
+
+              <div
+                class="text-center p-4 transform transition-all duration-300 hover:scale-105"
+              >
+                <div
+                  class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <i class="fa fa-graduation-cap text-primary text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-bold text-primary mb-3">教育实践</h4>
+                <p class="text-gray-600">
+                  提供实践平台，增强学生对历史文化的认知和理解
+                </p>
+              </div>
+
+              <div
+                class="text-center p-4 transform transition-all duration-300 hover:scale-105"
+              >
+                <div
+                  class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <i class="fa fa-globe text-primary text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-bold text-primary mb-3">社会影响</h4>
+                <p class="text-gray-600">
+                  提高公众对文化遗产保护的意识，促进地方文化旅游发展
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 行程安排 -->
+    <section id="schedule" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2
+            class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-4"
+          >
+            行程安排
+          </h2>
+          <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            五天四夜的泉州文化探索之旅，领略海上丝绸之路的千年魅力
+          </p>
+        </div>
+
+        <div class="relative">
+          <!-- 时间线 -->
+          <div
+            class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"
+          ></div>
+
+          <!-- 日程列表 -->
+          <div class="space-y-12 relative">
+            <!-- 第一天 -->
+            <div
+              class="flex flex-col md:flex-row items-center md:items-start md:space-x-12"
+            >
+              <div class="md:w-1/2 md:text-right mb-6 md:mb-0">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform md:translate-x-8"
+                >
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-bold text-primary">7月8日</h3>
+                      <p class="text-gray-500">星期二</p>
+                    </div>
+                    <span
+                      class="bg-secondary text-primary font-bold py-1 px-4 rounded-full text-sm"
+                      >第一天</span
+                    >
+                  </div>
+                  <div class="mt-4 space-y-3">
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >8:00</span
+                      >
+                      <p>乘坐动车到达泉州站，后乘车前往酒店</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >9:30</span
+                      >
+                      <p>前往南音艺苑</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >11:20</span
+                      >
+                      <p>
+                        泉州府文庙，府文庙内路线安排：泮宫与泮池泮桥—大成殿—月台
+                      </p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >14:00</span
+                      >
+                      <p>
+                        前往泉州市舶司遗址，内部路线安排：水门巷—水沟巷—舶司库巷—马坂巷—雀鸟巷—竹街—南薰门遗址
+                      </p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >16:00</span
+                      >
+                      <p>
+                        前往泉州海外交通史博物馆，内部参观展厅路线："泉州：宋元中国的世界海洋商贸中心"展厅—"泉州宗教石刻陈列馆"展厅—"阿拉伯
+                        - 波斯人在泉州"展厅—"中国舟船世界"展厅
+                      </p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >19:00</span
+                      >
+                      <p>晚餐后返回酒店</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="md:hidden bg-primary/10 rounded-full w-12 h-12 flex items-center justify-center mb-6"
+              >
+                <span class="text-primary font-bold text-xl">1</span>
+                </div>
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 bg-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+                    <span class="text-white font-bold text-xl" style="padding: 17px; position: relative; top: 9px">1</span
+                >
+              </div>
+              <div class="md:w-1/2 md:mt-24">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src="https://picsum.photos/id/1019/800/600"
+                    alt="泉州府文庙"
+                    class="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- 第二天 -->
+            <div
+              class="flex flex-col md:flex-row items-center md:items-start md:space-x-12"
+            >
+              <div class="md:w-1/2 md:order-2 md:text-left mb-6 md:mb-0">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform md:-translate-x-8"
+                >
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-bold text-primary">7月9日</h3>
+                      <p class="text-gray-500">星期三</p>
+                    </div>
+                    <span
+                      class="bg-secondary text-primary font-bold py-1 px-4 rounded-full text-sm"
+                      >第二天</span
+                    >
+                  </div>
+                  <div class="mt-4 space-y-3">
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >7:30</span
+                      >
+                      <p>早餐</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >8:00</span
+                      >
+                      <p>乘坐包车前往叶飞将军故里（约1小时20分钟）</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >10:30</span
+                      >
+                      <p>乘车前往郑成功纪念馆（约1小时15分钟）</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >13:30</span
+                      >
+                      <p>
+                        前往蔡氏古民居建筑群（约30分钟），内部路线：蔡启昌厝—蔡资深故居—攸楫厝—蔡浅厝—孝友第—民俗文化展示馆
+                      </p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >15:30</span
+                      >
+                      <p>前往岑兜闽南高甲戏户外博物馆（约15分钟）</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >19:00</span
+                      >
+                      <p>乘坐包车返回酒店（约1小时）</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="md:hidden bg-primary/10 rounded-full w-12 h-12 flex items-center justify-center mb-6"
+              >
+                <span class="text-primary font-bold text-xl">2</span>
+                </div>
+                <div class="hidden md:block absolute right-1/2 transform -translate-x-1/2 bg-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+                    <span class="text-white font-bold text-xl" style="padding: 17px; position: relative; top: 9px">2</span
+                >
+              </div>
+              <div class="md:w-1/2 md:order-1 md:mt-24">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src="https://picsum.photos/id/1020/800/600"
+                    alt="蔡氏古民居建筑群"
+                    class="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- 第三天 -->
+            <div
+              class="flex flex-col md:flex-row items-center md:items-start md:space-x-12"
+            >
+              <div class="md:w-1/2 md:text-right mb-6 md:mb-0">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform md:translate-x-8"
+                >
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-bold text-primary">7月10日</h3>
+                      <p class="text-gray-500">星期四</p>
+                    </div>
+                    <span
+                      class="bg-secondary text-primary font-bold py-1 px-4 rounded-full text-sm"
+                      >第三天</span
+                    >
+                  </div>
+                  <div class="mt-4 space-y-3">
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >8:00</span
+                      >
+                      <p>早餐</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >8:30</span
+                      >
+                      <p>前往泉州木偶剧院（约15分钟）</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >15:00</span
+                      >
+                      <p>前往泉州鲤城区社会福利院（约10分钟）</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >19:00</span
+                      >
+                      <p>前往泉州非物质文化遗产馆（约10分钟）</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="md:hidden bg-primary/10 rounded-full w-12 h-12 flex items-center justify-center mb-6"
+              >
+                <span class="text-primary font-bold text-xl">3</span>
+                </div>
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 bg-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+                    <span class="text-white font-bold text-xl" style="padding: 17px; position: relative; top: 9px">3</span
+                >
+              </div>
+              <div class="md:w-1/2 md:mt-24">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src="https://picsum.photos/id/1021/800/600"
+                    alt="泉州木偶戏"
+                    class="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- 第四天 -->
+            <div
+              class="flex flex-col md:flex-row items-center md:items-start md:space-x-12"
+            >
+              <div class="md:w-1/2 md:order-2 md:text-left mb-6 md:mb-0">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform md:-translate-x-8"
+                >
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-bold text-primary">7月11日</h3>
+                      <p class="text-gray-500">星期五</p>
+                    </div>
+                    <span
+                      class="bg-secondary text-primary font-bold py-1 px-4 rounded-full text-sm"
+                      >第四天</span
+                    >
+                  </div>
+                  <div class="mt-4 space-y-3">
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >8:30</span
+                      >
+                      <p>早餐</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >8:45</span
+                      >
+                      <p>前往闽台缘博物馆（约10分钟）</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >14:00</span
+                      >
+                      <p>前往蟳埔村（约30分钟）</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="md:hidden bg-primary/10 rounded-full w-12 h-12 flex items-center justify-center mb-6"
+              >
+                <span class="text-primary font-bold text-xl">4</span>
+                </div>
+                <div class="hidden md:block absolute right-1/2 transform -translate-x-1/2 bg-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+                    <span class="text-white font-bold text-xl" style="padding: 17px; position: relative; top: 9px">4</span
+                >
+              </div>
+              <div class="md:w-1/2 md:order-1 md:mt-24">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src="https://picsum.photos/id/1023/800/600"
+                    alt="闽台缘博物馆"
+                    class="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- 第五天 -->
+            <div
+              class="flex flex-col md:flex-row items-center md:items-start md:space-x-12"
+            >
+              <div class="md:w-1/2 md:text-right mb-6 md:mb-0">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform md:translate-x-8"
+                >
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-bold text-primary">7月12日</h3>
+                      <p class="text-gray-500">星期六</p>
+                    </div>
+                    <span
+                      class="bg-secondary text-primary font-bold py-1 px-4 rounded-full text-sm"
+                      >第五天</span
+                    >
+                  </div>
+                  <div class="mt-4 space-y-3">
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >8:00</span
+                      >
+                      <p>早餐</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >8:30</span
+                      >
+                      <p>前往泉州市开元寺（约10分钟）</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >14:00</span
+                      >
+                      <p>前往泉州市科技馆（约30分钟）</p>
+                    </div>
+                    <div class="flex items-center">
+                      <span
+                        class="bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm mr-3"
+                        >19:00</span
+                      >
+                      <p>由泉州站返回福州</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="md:hidden bg-primary/10 rounded-full w-12 h-12 flex items-center justify-center mb-6"
+              >
+                <span class="text-primary font-bold text-xl">5</span>
+                </div>
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 bg-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+                    <span class="text-white font-bold text-xl" style="padding: 17px; position: relative; top: 9px">5</span
+                >
+              </div>
+              <div class="md:w-1/2 md:mt-24">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src="https://picsum.photos/id/1024/800/600"
+                    alt="泉州市开元寺"
+                    class="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 精彩看点 -->
+    <section id="highlights" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2
+            class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-4"
+          >
+            精彩看点
+          </h2>
+          <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            探索泉州文化遗产的亮点与特色活动
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- 看点1 -->
+          <div
+            class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="relative h-64">
+                                  <a href="https://www.fzu.edu.cn/" target="_blank">
+              <img
+                src="https://picsum.photos/id/1025/800/600"
+                alt="泉州南音"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              >
+                <h3 class="text-white text-xl font-bold p-6">泉州南音</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                泉州南音是现存历史最悠久的汉族古乐，有"中国音乐史上的活化石"之称，被列入人类非物质文化遗产代表作名录。
+              </p>
+              <div class="flex items-center text-sm text-gray-500">
+                <i class="fa fa-calendar-o mr-2"></i>
+                <span>7月8日 上午</span>
+                    <span class="mx-2">•</span>
+                    <i class="fa fa-map-marker mr-2"></i>
+                    <span>南音艺苑</span>
+                </div>
+                </a>
+            </div>
+            </div>
+
+            <!-- 看点2 -->
+            <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="relative h-64">
+                    <a href="https://www.fzu.edu.cn/" target="_blank">
+                        <img src="https://picsum.photos/id/1026/800/600" alt="泉州木偶戏" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <h3 class="text-white text-xl font-bold p-6">泉州木偶戏</h3>
+                        </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">
+                        泉州木偶戏是中国传统木偶戏的重要代表，包括提线木偶、掌中木偶等，技艺精湛，被列入第一批国家级非物质文化遗产名录。
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-calendar-o mr-2"></i>
+                        <span>7月10日 上午</span>
+                        <span class="mx-2">•</span>
+                        <i class="fa fa-map-marker mr-2"></i>
+                        <span>泉州木偶剧院</span>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 看点3 -->
+            <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="relative h-64">
+                    <a href="https://www.fzu.edu.cn/" target="_blank">
+                        <img src="https://picsum.photos/id/1027/800/600" alt="蔡氏古民居建筑群" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <h3 class="text-white text-xl font-bold p-6">
+                                蔡氏古民居建筑群
+                            </h3>
+                        </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">
+                        蔡氏古民居建筑群是福建现存规模最大的古民居建筑群，融合了闽南建筑艺术与西方建筑元素，被誉为"闽南建筑的大观园"。
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-calendar-o mr-2"></i>
+                        <span>7月9日 下午</span>
+                        <span class="mx-2">•</span>
+                        <i class="fa fa-map-marker mr-2"></i>
+                        <span>南安市官桥镇</span>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 看点4 -->
+            <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="relative h-64">
+                    <a href="https://www.fzu.edu.cn/" target="_blank">
+                        <img src="https://picsum.photos/id/1028/800/600" alt="泉州海外交通史博物馆" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <h3 class="text-white text-xl font-bold p-6">
+                                海外交通史博物馆
+                            </h3>
+                        </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">
+                        泉州海外交通史博物馆是中国唯一以海外交通史为专题的博物馆，馆藏文物丰富，展示了泉州在海上丝绸之路中的重要地位。
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-calendar-o mr-2"></i>
+                        <span>7月8日 下午</span>
+                        <span class="mx-2">•</span>
+                        <i class="fa fa-map-marker mr-2"></i>
+                        <span>东湖公园东侧</span>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 看点5 -->
+            <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="relative h-64">
+
+                    <a href="https://www.fzu.edu.cn/" target="_blank">
+                        <img src="https://picsum.photos/id/1029/800/600" alt="闽台缘博物馆" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <h3 class="text-white text-xl font-bold p-6">闽台缘博物馆</h3>
+                        </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">
+                        闽台缘博物馆是反映中国大陆与台湾地区历史关系的国家级专题博物馆，通过文物、历史资料等展示了闽台两地的渊源关系。
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-calendar-o mr-2"></i>
+                        <span>7月11日 上午</span>
+                        <span class="mx-2">•</span>
+                        <i class="fa fa-map-marker mr-2"></i>
+                        <span>泉州市西湖公园北侧</span>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 看点6 -->
+            <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="relative h-64">
+                    <a href="https://www.fzu.edu.cn/" target="_blank">
+                        <img src="https://picsum.photos/id/1029/800/600" alt="蟳埔村" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <h3 class="text-white text-xl font-bold p-6">蟳埔渔村</h3>
+                        </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">
+                        蟳埔渔村是一个具有千年历史的闽南渔村，保留了独特的民俗文化和建筑风格，尤其是蟳埔女的传统服饰和头饰闻名遐迩。
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-calendar-o mr-2"></i>
+                        <span>7月11日 下午</span>
+                        <span class="mx-2">•</span>
+                        <i class="fa fa-map-marker mr-2"></i>
+                        <span>泉州市丰泽区</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+            </div>
+
+            <!-- 数据统计 -->
+            <div class="mt-20">
+                <div class="bg-primary/5 rounded-xl p-8 shadow-md">
+                    <h3 class="text-2xl font-bold text-primary mb-8 text-center">
+                        活动数据统计
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-8 justify-center">
+
+                        <div class="bg-white p-6 rounded-xl shadow-sm mx-auto w-full">
+                            <h4 class="text-lg font-bold text-primary mb-4">
+                                文化遗产点分布
+                            </h4>
+                            <div class="h-80 w-full">
+
+                                <canvas id="heritageChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm mx-auto w-full">
+
+                            <h4 class="text-lg font-bold text-primary mb-4">
+                                活动类型占比
+                            </h4>
+                            <div class="h-80 w-full">
+
+                                <canvas id="activityChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </section>
+
+            <!-- 活动掠影 -->
+            <section id="gallery" class="py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-4">
+                            活动掠影
+                        </h2>
+                        <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                            记录实践队在泉州的精彩瞬间
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div class="overflow-hidden rounded-xl shadow-md group relative h-64">
+                            <img src="https://picsum.photos/id/1031/800/800" alt="实践队在泉州府文庙前合影" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <p class="text-white font-bold px-4">实践队在泉州府文庙前合影</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl shadow-md group relative h-64">
+                            <img src="https://picsum.photos/id/1032/800/800" alt="参观泉州海外交通史博物馆" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <p class="text-white font-bold px-4">参观泉州海外交通史博物馆</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl shadow-md group relative h-64">
+                            <img src="https://picsum.photos/id/1033/800/800" alt="体验泉州木偶戏" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <p class="text-white font-bold px-4">体验泉州木偶戏</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl shadow-md group relative h-64">
+                            <img src="https://picsum.photos/id/1033/800/800" alt="走访蔡氏古民居" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <p class="text-white font-bold px-4">走访蔡氏古民居</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl shadow-md group relative h-64">
+                            <img src="https://picsum.photos/id/1035/800/800" alt="聆听闽南高甲戏" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <p class="text-white font-bold px-4">聆听闽南高甲戏</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl shadow-md group relative h-64">
+                            <img src="https://picsum.photos/id/1036/800/800" alt="参观闽台缘博物馆" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <p class="text-white font-bold px-4">参观闽台缘博物馆</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl shadow-md group relative h-64">
+                            <img src="https://picsum.photos/id/1037/800/800" alt="体验蟳埔女服饰文化" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <p class="text-white font-bold px-4">体验蟳埔女服饰文化</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl shadow-md group relative h-64">
+                            <img src="https://picsum.photos/id/1038/800/800" alt="实践队在开元寺前合影" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <p class="text-white font-bold px-4">实践队在开元寺前合影</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 视频展示（封面点击跳转版） -->
+                    <div class="mt-16 bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-6 text-center">
+                            活动视频记录
+                        </h3>
+                        <div class="relative aspect-video max-w-4xl mx-auto rounded-xl overflow-hidden shadow-xl group">
+                            <!-- 封面图（点击跳转链接） -->
+                            <a target="_blank" href="https://www.bilibili.com/video/BV1Az421B7A2/?spm_id_from=333.337.search-card.all.click&vd_source=ad4b220474649e8b0f22f9608651e2f3" class="block w-full h-full">
+                                <img src="https://picsum.photos/id/1039/1280/720" alt="泉州文化探索之旅视频" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+
+                                <!-- 播放按钮（覆盖在封面图上，增强点击引导） -->
+                                <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors duration-300">
+                                    <div class="bg-primary/90 hover:bg-primary text-white w-28 h-28 rounded-full flex items-center justify-center transition-all duration-300 transform group-hover:scale-110 shadow-2xl">
+                                        <i class="fa fa-play text-4xl"></i>
+                                    </div>
+                                </div>
+
+                                <!-- 视频信息（底部显示） -->
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                                    <h4 class="text-white text-xl font-bold mb-1">泉州文化探索之旅</h4>
+                                    <p class="text-white/80 text-sm">点击播放 | 5分30秒 | 2025-07-15</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- 实践团队 -->
+            <section id="team" class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-4">
+                            实践团队
+                        </h2>
+                        <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                            福州大学"溯洄海丝文脉，寻梦千年世遗"实践队成员
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- 队长 -->
+                        <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll">
+                            <div class="relative h-64">
+                                <img src="images/wangwanyi.jpg" alt="王婉怡" class="w-full h-full object-cover" />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <h3 class="text-white text-xl font-bold">王婉怡</h3>
+                                    <p class="text-white/80">队长 | 计算机与大数据学院</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 mb-4">所有</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 副队长1 -->
+                        <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll animate-delay-100">
+                            <div class="relative h-64">
+                                <img src="images/chenmengyao.jpg" alt="陈梦瑶" class="w-full h-full object-cover" />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <h3 class="text-white text-xl font-bold">陈梦瑶</h3>
+                                    <p class="text-white/80">副队长 | 计算机与大数据学院</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 mb-4">提前联系、最后的大报告写稿</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 副队长2 -->
+                        <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll animate-delay-200">
+                            <div class="relative h-64">
+                                <img src="images/zhangweilin.jpg" alt="张伟林" class="w-full h-full object-cover" />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <h3 class="text-white text-xl font-bold">张伟林</h3>
+                                    <p class="text-white/80">副队长 | 计算机与大数据学院</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 mb-4">拍摄、剪辑</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 队员1 -->
+                        <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll animate-delay-300">
+                            <div class="relative h-64">
+                                <img src="images/chenbinghui.jpg" alt="陈炳珲" class="w-full h-full object-cover" />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <h3 class="text-white text-xl font-bold">陈炳珲</h3>
+                                    <p class="text-white/80">队员 | 计算机与大数据学院</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 mb-4">物资准备、智能体</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 队员2 -->
+                        <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll animate-delay-400">
+                            <div class="relative h-64">
+                                <img src="images/chenzhen.jpg" alt="陈铮" class="w-full h-full object-cover" />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <h3 class="text-white text-xl font-bold">陈铮</h3>
+                                    <p class="text-white/80">队员 | 计算机与大数据学院</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 mb-4">报销事宜、AI修复</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 队员3 -->
+                        <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll animate-delay-500">
+                            <div class="relative h-64">
+                                <img src="images/leijiayu.jpg" alt="雷葭雨" class="w-full h-full object-cover" />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <h3 class="text-white text-xl font-bold">雷葭雨</h3>
+                                    <p class="text-white/80">队员 | 计算机与大数据学院</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 mb-4">写稿（4）、拍照</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 队员4 -->
+                        <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll">
+                            <div class="relative h-64">
+                                <img src="images/linyuyang.jpg" alt="林宇扬" class="w-full h-full object-cover" />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <h3 class="text-white text-xl font-bold">林宇扬</h3>
+                                    <p class="text-white/80">队员 | 计算机与大数据学院</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 mb-4">拍摄、大视频的剪辑</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 队员5 -->
+                        <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll animate-delay-100">
+                            <div class="relative h-64">
+                                <img src="images/qiunanxing.jpg" alt="丘南星" class="w-full h-full object-cover" />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <h3 class="text-white text-xl font-bold">丘南星</h3>
+                                    <p class="text-white/80">队员 | 计算机与大数据学院</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 mb-4">包车、酒店安排、志愿时长协商</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 队员6 -->
+                        <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll animate-delay-200">
+                            <div class="relative h-64">
+                                <img src="images/tangwenqi.jpg" alt="汤文琪" class="w-full h-full object-cover" />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <h3 class="text-white text-xl font-bold">汤文琪</h3>
+                                    <p class="text-white/80">队员 | 计算机与大数据学院</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 mb-4">写稿（3）、采访脚本、录像</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 队员7 -->
+                        <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll animate-delay-300">
+                            <div class="relative h-64">
+                                <img src="images/zhengyilin.jpg" alt="郑一林" class="w-full h-full object-cover" />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <h3 class="text-white text-xl font-bold">郑一林</h3>
+                                    <p class="text-white/80">队员 | 计算机与大数据学院</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 mb-4">写稿（1，2）、拍照、非遗推广大视频脚本</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                    <a href="#" class="text-primary hover:text-primary/80">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 指导老师 -->
+                    <div class="mt-16">
+                        <h3 class="text-2xl font-bold text-primary mb-8 text-center">
+                            指导老师
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                            <!-- 老师1 -->
+                            <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex animate-on-scroll animate-delay-400">
+                                <div class="w-1/3">
+                                    <img src="images/zhangke.jpg" alt="张轲" class="w-full h-full object-cover" />
+                                </div>
+                                <div class="w-2/3 p-6">
+                                    <h4 class="text-xl font-bold text-primary mb-2">张轲</h4>
+                                    <p class="text-gray-500 mb-3">计算机与大数据学院辅导员</p>
+                                    <p class="text-gray-600">带队</p>
+                                    <div class="mt-4 flex space-x-3">
+                                        <a href="#" class="text-primary hover:text-primary/80">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                        <a href="#" class="text-primary hover:text-primary/80">
+                                            <i class="fa fa-phone"></i>
+                                        </a>
+                                        <a href="#" class="text-primary hover:text-primary/80">
+                                            <i class="fa fa-weixin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 老师2 -->
+                            <div class="bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex animate-on-scroll animate-delay-500">
+                                <div class="w-1/3">
+                                    <img src="images/tangzhide.jpg" alt="汤智德" class="w-full h-full object-cover" />
+                                </div>
+                                <div class="w-2/3 p-6">
+                                    <h4 class="text-xl font-bold text-primary mb-2">汤智德</h4>
+                                    <p class="text-gray-500 mb-3">计算机与大数据学院辅导员</p>
+                                    <p class="text-gray-600">带队</p>
+                                    <div class="mt-4 flex space-x-3">
+                                        <a href="#" class="text-primary hover:text-primary/80">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                        <a href="#" class="text-primary hover:text-primary/80">
+                                            <i class="fa fa-phone"></i>
+                                        </a>
+                                        <a href="#" class="text-primary hover:text-primary/80">
+                                            <i class="fa fa-weixin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 联系我们 -->
+            <section id="contact" class="py-20 bg-primary text-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">
+                            联系我们
+                        </h2>
+                        <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                        <p class="text-lg text-white/80 max-w-3xl mx-auto">
+                            欢迎关注我们的实践活动，了解更多关于泉州文化遗产的信息
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-1 gap-12 items-center">
+                        <!-- 改为单栏布局 -->
+                        <div>
+                            <div class="bg-white/10 rounded-xl p-8 backdrop-blur-sm">
+                                <h3 class="text-2xl font-bold mb-6">联系方式</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <div class="bg-secondary/20 p-3 rounded-full mr-4">
+                                            <i class="fa fa-envelope text-secondary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg mb-1">电子邮箱</h4>
+                                            <p class="text-white/80">代填@fzu.edu.cn</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start">
+                                        <div class="bg-secondary/20 p-3 rounded-full mr-4">
+                                            <i class="fa fa-phone text-secondary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg mb-1">联系电话</h4>
+                                            <p class="text-white/80">代填</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start">
+                                        <div class="bg-secondary/20 p-3 rounded-full mr-4">
+                                            <i class="fa fa-weixin text-secondary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg mb-1">微信公众号</h4>
+                                            <p class="text-white/80">福州大学海丝文脉实践队</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start">
+                                        <div class="bg-secondary/20 p-3 rounded-full mr-4">
+                                            <i class="fa fa-map-marker text-secondary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg mb-1">学校地址</h4>
+                                            <p class="text-white/80">
+                                                福建省福州市福州大学城乌龙江北大道2号
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-8">
+                                    <h4 class="font-bold text-lg mb-4">关注我们</h4>
+                                    <div class="flex space-x-4">
+                                        <a href="#" class="bg-white/10 hover:bg-white/20 w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-300">
+                                            <i class="fa fa-weibo text-white"></i>
+                                        </a>
+                                        <a href="#" class="bg-white/10 hover:bg-white/20 w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-300">
+                                            <i class="fa fa-weixin text-white"></i>
+                                        </a>
+                                        <a href="#" class="bg-white/10 hover:bg-white/20 w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-300">
+                                            <i class="fa fa-instagram text-white"></i>
+                                        </a>
+                                        <a href="#" class="bg-white/10 hover:bg-white/20 w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-300">
+                                            <i class="fa fa-youtube-play text-white"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 页脚 -->
+            <footer class="bg-dark text-white py-12">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-4">
+                                <i class="fa fa-ship text-secondary text-2xl"></i>
+                                <span class="font-bold text-xl">海丝文脉·世遗寻梦</span>
+                            </div>
+                            <p class="text-gray-400 mb-4">
+                                福州大学"溯洄海丝文脉，寻梦千年世遗"实践队
+                            </p>
+                            <p class="text-gray-400">
+                                探索海上丝绸之路文化遗产，传承千年世遗精神
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">快速链接</h4>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#about" class="text-gray-400 hover:text-secondary transition-colors duration-200">活动概况</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#schedule"
+                  class="text-gray-400 hover:text-secondary transition-colors duration-200"
+                  >行程安排</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#highlights"
+                  class="text-gray-400 hover:text-secondary transition-colors duration-200"
+                  >精彩看点</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#gallery"
+                  class="text-gray-400 hover:text-secondary transition-colors duration-200"
+                  >活动掠影</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#team"
+                  class="text-gray-400 hover:text-secondary transition-colors duration-200"
+                  >实践团队</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-secondary transition-colors duration-200"
+                  >联系我们</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">合作伙伴</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://www.qzbwg.cn/museumdisplay/"target="_blank"
+                  class="text-gray-400 hover:text-secondary transition-colors duration-200"
+                  >泉州博物馆</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.qzhjg.cn/html/index.html"target="_blank"
+                  class="text-gray-400 hover:text-secondary transition-colors duration-200"
+                  >泉州海外交通史博物馆</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.museumschina.cn/museums/details?id=35050321800013"target="_blank"
+                  class="text-gray-400 hover:text-secondary transition-colors duration-200"
+                  >闽台缘博物馆</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.cnqzmt.com/"target="_blank"
+                  class="text-gray-400 hover:text-secondary transition-colors duration-200"
+                  >泉州木偶剧院</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.quanzhou.gov.cn/lyb/lyxw/201306/t20130608_84923.htm"target="_blank"
+                  class="text-gray-400 hover:text-secondary transition-colors duration-200"
+                  >蔡氏古民居建筑群管理处</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">订阅我们</h4>
+            <p class="text-gray-400 mb-4">
+              订阅我们的电子通讯，获取最新活动信息
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-500">
+            &copy; 2025 福州大学"溯洄海丝文脉，寻梦千年世遗"实践队.
+            保留所有权利.
+          </p>
+          <div class="mt-4 md:mt-0">
+            <a
+              href="#"target="_blank"
+              class="text-gray-500 hover:text-secondary mx-2 transition-colors duration-200"
+              >隐私政策</a
+            >
+            <a
+              href="#"target="_blank"
+              class="text-gray-500 hover:text-secondary mx-2 transition-colors duration-200"
+              >使用条款</a
+            >
+            <a
+              href="#"target="_blank"
+              class="text-gray-500 hover:text-secondary mx-2 transition-colors duration-200"
+              >网站地图</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-primary hover:bg-primary/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 invisible"
+    >
+      <i class="fa fa-angle-up text-xl"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
