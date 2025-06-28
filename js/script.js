@@ -62,24 +62,49 @@ backToTopBtn.addEventListener("click", function() {
 
 // 初始化图表
 window.addEventListener("DOMContentLoaded", (event) => {
-    // 文化遗产点分布图表
+    // 红色遗址分布图表
     const heritageCtx = document.getElementById("heritageChart").getContext("2d");
     const heritageChart = new Chart(heritageCtx, {
         type: "bar",
         data: {
-            labels: ["丰泽区", "鲤城区", "南安市"],
+            labels: [
+                "福州文林山革命陵园",
+                "军门社区",
+                "林觉民故居/中共福州市委旧址",
+                "福建省革命历史纪念馆",
+                "宏琳厝",
+                "吉巷乡坂中村主题馆",
+                "双溪镇革命老区相关旧址",
+                "屏南县革命烈士陵园",
+                "陈祥榕烈士故里",
+                "下党村相关地点",
+            ],
             datasets: [{
-                label: "文化遗产点数量",
-                data: [5, 8, 3],
+                label: "红色遗址数量（按行程涉及）",
+                data: [1, 1, 1, 3, 1, 1, 3, 1, 1, 2],
                 backgroundColor: [
-                    "rgba(15, 76, 129, 0.7)",
-                    "rgba(230, 184, 0, 0.7)",
-                    "rgba(230, 115, 0, 0.7)",
+                    "rgba(192, 57, 43, 0.7)",
+                    "rgba(41, 128, 185, 0.7)",
+                    "rgba(46, 204, 113, 0.7)",
+                    "rgba(243, 156, 18, 0.7)",
+                    "rgba(155, 89, 182, 0.7)",
+                    "rgba(26, 188, 156, 0.7)",
+                    "rgba(149, 165, 166, 0.7)",
+                    "rgba(231, 76, 60, 0.7)",
+                    "rgba(52, 152, 219, 0.7)",
+                    "rgba(189, 195, 199, 0.7)",
                 ],
                 borderColor: [
-                    "rgba(15, 76, 129, 1)",
-                    "rgba(230, 184, 0, 1)",
-                    "rgba(230, 115, 0, 1)",
+                    "rgba(192, 57, 43, 1)",
+                    "rgba(41, 128, 185, 1)",
+                    "rgba(46, 204, 113, 1)",
+                    "rgba(243, 156, 18, 1)",
+                    "rgba(155, 89, 182, 1)",
+                    "rgba(26, 188, 156, 1)",
+                    "rgba(149, 165, 166, 1)",
+                    "rgba(231, 76, 60, 1)",
+                    "rgba(52, 152, 219, 1)",
+                    "rgba(189, 195, 199, 1)",
                 ],
                 borderWidth: 1,
             }, ],
@@ -90,6 +115,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
             scales: {
                 y: {
                     beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: "遗址数量",
+                    },
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: "红色遗址名称",
+                    },
+                    maxBarThickness: 40, // 调整柱状图宽度
                 },
             },
         },
@@ -100,20 +136,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const activityChart = new Chart(activityCtx, {
         type: "doughnut",
         data: {
-            labels: ["文化遗产参观", "非遗体验", "历史调研", "志愿服务"],
+            labels: ["红色遗址参观", "走访调研", "纪念缅怀", "主题学习"],
             datasets: [{
-                data: [40, 25, 20, 15],
+                data: [35, 25, 20, 20],
                 backgroundColor: [
-                    "rgba(15, 76, 129, 0.7)",
-                    "rgba(230, 184, 0, 0.7)",
-                    "rgba(230, 115, 0, 0.7)",
-                    "rgba(102, 178, 255, 0.7)",
+                    "rgba(41, 128, 185, 0.7)",
+                    "rgba(46, 204, 113, 0.7)",
+                    "rgba(231, 76, 60, 0.7)",
+                    "rgba(155, 89, 182, 0.7)",
                 ],
                 borderColor: [
-                    "rgba(15, 76, 129, 1)",
-                    "rgba(230, 184, 0, 1)",
-                    "rgba(230, 115, 0, 1)",
-                    "rgba(102, 178, 255, 1)",
+                    "rgba(41, 128, 185, 1)",
+                    "rgba(46, 204, 113, 1)",
+                    "rgba(231, 76, 60, 1)",
+                    "rgba(155, 89, 182, 1)",
                 ],
                 borderWidth: 1,
             }, ],
@@ -123,9 +159,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
             maintainAspectRatio: false,
             plugins: {
                 legend: {
-                    position: "bottom", // Removed the duplicate legend property
+                    position: "bottom",
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const label = context.label || "";
+                            const value = context.raw || 0;
+                            const total = context.dataset.data.reduce(
+                                (acc, val) => acc + val,
+                                0
+                            );
+                            const percentage = Math.round((value / total) * 100);
+                            return `${label}: ${percentage}%`;
+                        },
+                    },
                 },
             },
+            cutout: "65%",
         },
     });
     // 滚动动画
